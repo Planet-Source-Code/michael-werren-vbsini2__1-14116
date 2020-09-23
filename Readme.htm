@@ -1,0 +1,351 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Readme-Dateien/filelist.xml">
+<title>WSHWIControl</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Michael Werren</o:Author>
+  <o:LastAuthor>Michael Werren</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:Created>2000-12-23T14:34:00Z</o:Created>
+  <o:LastSaved>2000-12-23T14:55:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>463</o:Words>
+  <o:Characters>2641</o:Characters>
+  <o:Lines>22</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>3243</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Standard;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:18.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;}
+h2
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Standard;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:EN-US;
+	font-weight:normal;
+	font-style:italic;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-72.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=DE-CH style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h1><span lang=EN-US>WSHWIControl.OCX</span></h1>
+
+<h2>Installation</h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Use the
+RegisterOcx.bat to register the new OCX File on your Computer<o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>DeInstallation<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Use the
+UnRegisterOcx.baf to deinstall the OCX File<o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>How to work with the OCX<o:p></o:p></span></h2>
+
+<h3><span lang=EN-US style='mso-ansi-language:EN-US'>Declaration of an Object<o:p></o:p></span></h3>
+
+<h4><span lang=EN-US>Create a new object and allocate memory, use the DIM command
+and initialized with the SET command</span></h4>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Dim ObjAdr<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Set ObjAdr
+=<span style="mso-spacerun: yes">  </span>WScript.CreateObject(&quot;WSHWIControl.WSHExt&quot;)<o:p></o:p></span></p>
+
+<h4><span lang=EN-US>Deallocate the memory of an Object</span></h4>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Set ObjAdr
+= Nothing<o:p></o:p></span></p>
+
+<h2><span lang=EN-US style='mso-ansi-language:EN-US'>The Commands of the OCX
+File<o:p></o:p></span></h2>
+
+<h4><span lang=EN-US>Read a key for a INI File</span></h4>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Syntax:<span
+style='mso-tab-count:2'>             </span>Object.WSHGetINI(&quot;SectionName&quot;,&quot;KeyName&quot;,&quot;
+TheINIFile&quot;)<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>Example:<span style='mso-tab-count:
+1'>          </span>Answer = objadr.WSHGetINI(&quot;Test&quot;,&quot;Name5&quot;,&quot;c:\temp\test.ini&quot;)<br>
+After execute the WSHGetINI the value is stored in the variable Answer, this
+one has to be defined with the Dim command (Dim Answer)</span></p>
+
+<h4><span lang=EN-US>Write a key to a INI File</span></h4>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-72.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Syntax:<span style='mso-tab-count:
+1'>             </span>Object.WSHWriteINI &quot;SectionName&quot;,KeyName&quot;,&quot;Value&quot;,&quot;
+TheINIFile&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-72.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Examle:<span style='mso-tab-count:
+1'>            </span>objadr.WSHWriteINI
+&quot;Test&quot;,&quot;Name5&quot;,&quot;Mr. Thomas
+Miller&quot;,&quot;c:\temp\test.ini&quot;<br>
+If the key still exist it will overwrite, new keys are created automatically<o:p></o:p></span></p>
+
+<h4><span lang=EN-US>Read all sections of an INI File</span></h4>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-72.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Syntax:<span style='mso-tab-count:
+1'>             </span>Object.WSHGetSections(&quot;TheINIFile&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-72.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Example:<span style='mso-tab-count:
+1'>          </span>Answer =
+objAdr.WSHGetSections(&quot;c:\temp\test.ini&quot;)<br>
+After execute the WSHGetSections the section names are comma separated in the
+variable Answer, this one has to be defined with the Dim command (Dim Answer)<o:p></o:p></span></p>
+
+<h4><span lang=EN-US>Read all keys of a section in an INI File</span></h4>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-72.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Syntax:<span style='mso-tab-count:
+1'>             </span>Object.WSHGetKeys(&quot;SectionName&quot;,&quot;TheINIFile&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-72.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Example:<span style='mso-tab-count:
+1'>          </span>Answer =
+objAdr.WSHGetKeys(&quot;Test&quot;,&quot;c:\temp\test.ini&quot;)<br>
+After execute the WSHGetKeys the key names are comma separated in the variable Answer,
+this one has to be defined with the Dim command (Dim Answer)<o:p></o:p></span></p>
+
+<h4><span lang=EN-US>Delete a key in a section of a INI file</span></h4>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Syntax:<span
+style='mso-tab-count:2'>             </span>Object.WSHINIDelKey &quot;SectionName&quot;,&quot;KeyName&quot;,&quot;TheINIFile&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Example:<span
+style='mso-tab-count:1'>          </span>objadr.WSHINIDelKey
+&quot;Test&quot;,&quot;Name2&quot;,&quot;c:\temp\test.ini&quot;<o:p></o:p></span></p>
+
+<h4><span lang=EN-US>Delete a section of a INI file<o:p></o:p></span></h4>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Syntax:<span
+style='mso-tab-count:2'>             </span>Object.WSHINIDelSection &quot;SectionName&quot;,&quot;TheINIFile&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Example:<span
+style='mso-tab-count:1'>          </span>objadr.WSHINIDelSection
+&quot;Test2&quot;,&quot;c:\temp\test.ini&quot;<o:p></o:p></span></p>
+
+<h4><span lang=EN-US>Sleep the script file</span></h4>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Syntax:<span
+style='mso-tab-count:2'>             </span>Object.WSHSleep TIMEinMiliseconds<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>Example:<span style='mso-tab-count:
+1'>          </span>objAdr.WSHSleep 1000<br>
+Sleep the Script for one second</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h3><span lang=EN-US style='mso-ansi-language:EN-US'>Example<o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>option Explicit<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>Dim ObjAdr<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Dim Antwort<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>'
+Declaration of the ActiveX Control<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>set ObjAdr =
+WScript.CreateObject(&quot;WSHWIControl.WSHExt&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Read a
+key from the INI file<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>Antwort =
+objadr.WSHGetINI(&quot;Test&quot;,&quot;Name5&quot;,&quot;c:\temp\test.ini&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>WScript.Echo &quot;I have read this key form
+the INI file:&quot; + chr(13) + Antwort<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Write to
+the INI file<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>objadr.WSHWriteINI
+&quot;Test&quot;,&quot;Name5&quot;,&quot;Mr. Thomas
+Miller&quot;,&quot;c:\temp\test.ini&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>WSCript.Echo &quot;I have write 'Mr. Thomas
+Miller' to the INI File&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Show all sections
+of the INI file<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>Antwort =
+objAdr.WSHGetSections(&quot;c:\temp\test.ini&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>WScript.Echo &quot;Those sections are in the
+INI file:&quot; + chr(13) + Antwort<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Take a
+sleep about 1 second<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>objAdr.WSHSleep 1000<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Show all
+keys of a section<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>Antwort = objAdr.WSHGetKeys(&quot;Test&quot;,&quot;c:\temp\test.ini&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>WScript.Echo &quot;This are the keys of the
+section Test:&quot; + chr(13) + Antwort<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Clear a
+key in a section of a INI file<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>objadr.WSHINIDelKey
+&quot;Test&quot;,&quot;Name2&quot;,&quot;c:\temp\test.ini&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Clear a
+section in a INI file<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>objadr.WSHINIDelSection
+&quot;Test2&quot;,&quot;c:\temp\test.ini&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>' Clear the
+memory of the Object and exit<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>set ObjAdr = Nothing<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">  </span>WScript.Quit()<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
